@@ -1,4 +1,4 @@
-import { getQuestions } from "../data/mockData"
+import { getQuestions,getAllAnswers } from "../data/mockData"
 
 const allQuesions = getQuestions();
 
@@ -15,6 +15,9 @@ export const getAllQuestions =()=>{
 
 export const getCountTotalQuestions=()=>{
     return allQuesions.length;
+}
+export const getAnswers =()=>{
+    return getAllAnswers();
 }
 
 export const showResult=()=>{

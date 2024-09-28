@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ProgressCircle.css";
 
 const ProgressCircle = ({ current, total }) => {
@@ -12,7 +12,7 @@ const ProgressCircle = ({ current, total }) => {
       <svg
         width={circleWidth}
         height={circleWidth}
-        viewBox={"0 0 ${circleWidth} ${circleWidth}"}
+        viewBox={`0 0 ${circleWidth} ${circleWidth}`}
       >
         <circle
           cx={circleWidth / 2}

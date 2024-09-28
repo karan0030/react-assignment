@@ -1,25 +1,57 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getAllQuestions } from "../../service/questions";
 import "./home.css";
 import logo from "../../assets/logo.svg";
 import quizIcon from "../../assets/quiz-icon.svg";
 import Button from "../../components/button/Button";
+import {
+  setAllQuestions,
+  setTotalQuestions,
+  setCurrentQuestion,
+  setAllAnswersEmpty,
+} from "../../action";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const loadQuestions = async () => {
+    const allQuestions = await getAllQuestions();
+    //load in store
+    dispatch(setAllQuestions(allQuestions.questions));
+    dispatch(setTotalQuestions(allQuestions.total));
+    dispatch(setCurrentQuestion(allQuestions.questions[0]));
+    dispatch(setAllAnswersEmpty());
+  };
 
   useEffect(() => {
-    const handleBackNavigation = (event) => {
-      event.preventDefault();
-      // Prevent the user from navigating back
-      navigate("/home", { replace: true });
+    loadQuestions();
+  }, []);
+  const startQuiz = () => {
+    navigate("/quiz", { replace: true });
+  };
+  useEffect(() => {
+    // Handle back/forward button
+    const handlePopState = () => {
+      navigate("/"); // Route to home page
     };
 
-    window.history.pushState(null, "", window.location.href); // Push state to prevent back navigation
-    window.addEventListener("popstate", handleBackNavigation); // Catch back/forward button press
+    // Handle reload
+    const handleBeforeUnload = (event) => {
+      navigate("/"); // Route to home page
+    };
 
+    // Listen to popstate (for back/forward buttons)
+    window.addEventListener("popstate", handlePopState);
+
+    // Listen to beforeunload (for reload)
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Cleanup event listeners on component unmount
     return () => {
-      window.removeEventListener("popstate", handleBackNavigation); // Cleanup event listener
+      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, [navigate]);
 
@@ -40,7 +72,9 @@ const Home = () => {
           <Button
             className="home_screen_start w-100 px-2"
             text={"Start"}
-            action={() => {}}
+            action={() => {
+              startQuiz();
+            }}
           />
         </div>
       </div>

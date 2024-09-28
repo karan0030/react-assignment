@@ -46,9 +46,13 @@ const quizData = [
         return questions;
     }
 
-    const getAnswers=()=>{
-        const questions = quizData.map((data)=> ({  id: data.id, answer: data.answer  }));
-        return questions;
+    const getAllAnswers=()=>{
+        const allAnswers ={};
+        for(let i=0;i<quizData.length;i+=1){
+          allAnswers[quizData[i].id] = quizData[i].answer;
+        }
+      
+        return allAnswers;
     }
 
-    export {getQuestions , getAnswers}
+    export {getQuestions , getAllAnswers}
