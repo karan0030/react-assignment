@@ -1,44 +1,48 @@
+import ballIcon from '../assets/ball.svg';
 const quizData = [
     {
       id: 1,
-      question: "The full form of CSS is",
+      question: "Select number less than 5.",
       questionImage:'',
+      isMulti:false,
       options: [
-        "Cascading Style Sheets",
-        "Coloured Special Sheets",
-        "Color and Style Sheets",
+        "6",
+        "8",
+        "3",
         "None of the above"
       ],
-      answer: [0]
+      answer: [2]
     },
     {
         id: 2,
-        question: "The full form of CSS is",
+        question: "Select number less than 5.",
         questionImage:'',
+        isMulti:true,
         options: [
-          "Cascading Style Sheets",
-          "Coloured Special Sheets",
-          "Color and Style Sheets",
-          "None of the above"
-        ],
-        answer: [0]
+            "6",
+            "1",
+            "3",
+            "None of the above"
+      ],
+      answer: [1,2]
       },
       {
         id: 3,
-        question: "The full form of CSS is",
-        questionImage:'',
+        question: "Identify the object in photo",
+        questionImage:  ballIcon,
+        isMulti:false,
         options: [
-          "Cascading Style Sheets",
-          "Coloured Special Sheets",
-          "Color and Style Sheets",
+          "car",
+          "bag",
+          "ball",
           "None of the above"
         ],
-        answer: [0]
+        answer: [2]
       },
     ];
 
     const getQuestions=()=>{
-        const questions = quizData.map((data)=> ({  id: data.id, question: data.question, options: data.options , questionImage: data.image  }));
+        const questions = quizData.map((data)=> ({  id: data.id, question: data.question, options: data.options , questionImage: data.questionImage, isMulti: data.isMulti  }));
         return questions;
     }
 

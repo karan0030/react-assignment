@@ -4,7 +4,9 @@ import React from "react";
 import "./Option.css";
 
 // Assets
-import { selectedOption, option } from "../../assets";
+import selectedOption from "../../assets/selectedOption.svg";
+import option from "../../assets/option.svg";
+
 
 const Option = ({ id, text, selected, onSelectAction }) => {
   return (
