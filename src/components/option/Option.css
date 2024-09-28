@@ -1,0 +1,24 @@
+.option_wrap {
+  background-color: #f3f4fa;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  border-radius: 10px;
+  gap: 20px;
+}
+.option_wrap_selected {
+  border: 2px solid #44b77b;
+}
+
+.option_text {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 45px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.option_svg {
+  width: 24px;
+}

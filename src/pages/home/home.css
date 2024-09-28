@@ -1,0 +1,17 @@
+.home-container {
+    background-image: linear-gradient(to bottom, #af9cf300, #af9cf3);
+    height: 100vh;
+    margin: 0;
+}
+
+.logo{
+    width: 10em;
+}
+
+.quiz-logo{
+    height: 15em;
+    width: 20em;
+}
+.btn-start{
+    margin-top: 25vh;
+}

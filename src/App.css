@@ -1,0 +1,16 @@
+.App{
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's width and height */
+}
+
+/* Ensure the body and html take up the full height and width */
+html, body {
+  height: 100%;
+  width: 100%;
+}

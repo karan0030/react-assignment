@@ -1,0 +1,68 @@
+.quiz-background{
+    background-color: #af9cf3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.question-body{
+    background-color: white;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.question_screen_wrap {
+    background-color: #af9cf3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .question_screen_body {
+    background-color: #fff;
+    width: 100%;
+    max-width: 750px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .question_progress_circle_wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .question_progress_circle {
+    position: absolute;
+    top: -50px;
+  }
+  
+  .question_title {
+    margin-top: 60px;
+  }
+  
+  .question_options {
+    margin-bottom: 90px;
+    padding: 0 10px;
+  }
+  
+  .next_button_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    max-width: 750px;
+    bottom: 20px;
+  }
+  
+  .next_button {
+    width: 80%;
+  }
+  

@@ -1,0 +1,38 @@
+.progress_circle_wrap {
+  background-color: #fff;
+  border-radius: 50%;
+  /* background: radial-gradient(white 50%, transparent 51%),
+    conic-gradient(transparent 0deg 360deg, gainsboro 220deg 360deg),
+    conic-gradient(#44B77B 0deg, #44B77B ); */
+  /* width: 120px;
+  height: 120px; */
+}
+.progress_circle_counter {
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 96px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.progress_circle_current_step {
+  font-family: Nunito;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 96px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.progress_circle_background {
+  fill: #fff;
+  stroke: #ddd;
+}
+.progress_circle_progress {
+  fill: none;
+  stroke: #44b77b;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

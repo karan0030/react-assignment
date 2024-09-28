@@ -1,0 +1,41 @@
+.result_output_wrap {
+  margin: 10px 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.result_output_correct {
+  background-color: rgba(68, 183, 123, 0.11);
+}
+
+.result_output_incorrect {
+  background-color: rgba(255, 59, 63, 0.11);
+}
+
+.result_count {
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.result_circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.result_circle_correct {
+  background-color: rgb(68, 183, 123);
+}
+
+.result_circle_incorrect {
+  background-color: rgb(255, 59, 63);
+}
+
+.result_text {
+  color: rgba(0, 0, 0, 0.5);
+}

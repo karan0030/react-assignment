@@ -1,0 +1,29 @@
+.result_head {
+    font-family: Nunito;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-top: 37px;
+    margin-bottom: 40px;
+  }
+  
+  .result_meter_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .result_button_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    max-width: 750px;
+    bottom: -11px;
+  }
+  
